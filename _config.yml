@@ -9,6 +9,3 @@ sass:
   load_paths:
     - _sass
     - _sass/node_modules
-
-plugins:
-  - jekyll-toc
