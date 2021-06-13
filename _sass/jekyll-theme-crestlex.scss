@@ -112,10 +112,6 @@ a[data-local]:hover {
     text-decoration-style: solid;
 }
 
-.nounder {
-    text-decoration-line: none;;
-}
-
 // A la GitHub
 
 blockquote {
@@ -146,6 +142,12 @@ li {
     div.highlighter-rouge {
         margin-bottom: 0;
     }
+}
+
+.grid-container-team {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 20px;
 }
 
 // Shrink Scratch blocks, a la http://scratchblocks.github.io/
