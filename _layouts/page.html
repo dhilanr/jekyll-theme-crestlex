@@ -10,12 +10,13 @@
 
     <body class="invisible">
 
-        {% if site.crestlex.alert %}
-        {%- capture alert -%}{%- include alert.md -%}{%- endcapture -%}
-        <div class="alert fixed-top mb-0 rounded-0 shadow" data-alert="{{ site.crestlex.alert }}" data-hash="{{ alert | md5 }}" id="alert" role="alert">
-            <button aria-label="Close" class="close d-none" data-dismiss="alert" type="button">
+        <!-- alerts added to _config.yml: primary,secondary,success,danger,warning,info,light,dark -->
+        {% if site.alert %}
+        <div class="alert alert-dismissible fixed-top mb-0 rounded-0 shadow" data-alert="{{ site.alert }}" id="alert" role="alert">
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
+            {%- capture alert -%}{%- include alert.md -%}{%- endcapture -%}
             {{- alert | markdownify | replace: " id=", " data-id=" | strip -}}
         </div>
         {% endif %}
