@@ -10,6 +10,10 @@ body > div.container-fluid > div.row {
     align-items: flex-start;
 }
 
+body {
+    font-family: "Roboto";
+}
+
 // Crimson background, transparent text
 aside {
     background-color: $link-color;
@@ -143,6 +147,12 @@ footer {
 }
 footer:empty {
     margin-top: 0;
+}
+
+// LINK COLOR
+main a {
+    color:#268bd2;
+    font-family: "Roboto";
 }
 
 // Override column's padding, width
