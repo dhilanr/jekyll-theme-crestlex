@@ -149,6 +149,18 @@ footer:empty {
     margin-top: 0;
 }
 
+// Messages
+//
+// Show alert messages to users. You may add it to single elements like a `<p>`,
+// or to a parent if there are multiple elements to show.
+
+.message {
+    background-color: #efefef;
+    color: #1a1a1a;
+    margin-bottom: 1rem;
+    padding: 1rem;
+  }
+
 // LINK COLOR
 main a {
     color:#268bd2;
