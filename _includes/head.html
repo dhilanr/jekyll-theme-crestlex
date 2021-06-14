@@ -13,10 +13,10 @@
     {%- if page.title -%}
         {{- page.title -}}
     {%- endif -%}
-    {%- if site.title -%}
+    {%- if site.crestlex.title -%}
         {%- unless site.github and site.title == site.github.repository_name -%}
             {%- if page.title %} - {% endif -%}
-            {{- site.title -}}
+            {{- site.crestlex.title -}}
         {%- endunless -%}
     {%- endif -%}
 {%- endcapture -%}
@@ -25,25 +25,25 @@
 
 {%- assign time = site.time | date: '%s' -%}
 
-<link href="/favicon.ico?{{ time }}" rel="icon">
+<link href="{{ site.baseurl }}/favicon.ico?{{ time }}" rel="icon">
 
 <!-- https://fonts.google.com/specimen/PT+Sans?query=PT+Sans&selection.family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700 -->
 <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
 
 <!-- http://getbootstrap.com/docs/4.6/getting-started/introduction/ -->
-<script src="/assets/jquery/dist/jquery.min.js?{{ time }}"></script>
-<script src="/assets/bootstrap/dist/js/bootstrap.bundle.min.js?{{ time }}"></script>
+<script src="{{ site.baseurl }}/assets/jquery/dist/jquery.min.js?{{ time }}"></script>
+<script src="{{ site.baseurl }}/assets/bootstrap/dist/js/bootstrap.bundle.min.js?{{ time }}"></script>
 
 <!-- https://bootstrap-table.com/docs/getting-started/introduction/ -->
-<link href="/assets/bootstrap-table/dist/bootstrap-table.min.css?{{ time }}" rel="stylesheet">
-<script src="/assets/bootstrap-table/dist/bootstrap-table.min.js?{{ time }}"></script>
-<script src="/assets/bootstrap-table/dist/extensions/mobile/bootstrap-table-mobile.min.js?{{ time }}"></script>
+<link href="{{ site.baseurl }}/assets/bootstrap-table/dist/bootstrap-table.min.css?{{ time }}" rel="stylesheet">
+<script src="{{ site.baseurl }}/assets/bootstrap-table/dist/bootstrap-table.min.js?{{ time }}"></script>
+<script src="{{ site.baseurl }}/assets/bootstrap-table/dist/extensions/mobile/bootstrap-table-mobile.min.js?{{ time }}"></script>
 
 <!-- https://fontawesome.com/how-to-use/on-the-web/referencing-icons/basic-use -->
-<link href="/assets/@fortawesome/fontawesome-free/css/all.min.css?{{ time }}" rel="stylesheet">
+<link href="{{ site.baseurl }}/assets/@fortawesome/fontawesome-free/css/all.min.css?{{ time }}" rel="stylesheet">
 
 <!-- https://moment.github.io/luxon/ -->
-<script src="/assets/luxon.min.js?{{ time }}"></script>
+<script src="{{ site.baseurl }}/assets/luxon.min.js?{{ time }}"></script>
 
 <!-- http://docs.mathjax.org/ -->
 <!-- https://www.jsdelivr.com/package/npm/mathjax?path=es5 -->
@@ -65,8 +65,8 @@
 
 {% if site.algolia -%}
 <!-- https://www.algolia.com/doc/guides/building-search-ui/installation/js/ -->
-<script src="/assets/algoliasearchLite.min.js?{{ time }}"></script>
-<script src="/assets/instantsearch.production.min.js?{{ time }}"></script>
+<script src="{{ site.baseurl }}/assets/algoliasearchLite.min.js?{{ time }}"></script>
+<script src="{{ site.baseurl }}/assets/instantsearch.production.min.js?{{ time }}"></script>
 {%- endif %}
 
 <link href="{{ site.baseurl | append: '/assets/' | append: page.layout | append: '.css' }}?{{ time }}" rel="stylesheet">
