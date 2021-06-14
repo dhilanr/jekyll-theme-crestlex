@@ -13,10 +13,10 @@
     {%- if page.title -%}
         {{- page.title -}}
     {%- endif -%}
-    {%- if site.cs50.title -%}
-        {%- unless site.github and site.cs50.title == site.github.repository_name -%}
+    {%- if site.title -%}
+        {%- unless site.github and site.title == site.github.repository_name -%}
             {%- if page.title %} - {% endif -%}
-            {{- site.cs50.title -}}
+            {{- site.title -}}
         {%- endunless -%}
     {%- endif -%}
 {%- endcapture -%}
@@ -69,14 +69,8 @@
 <script src="/assets/instantsearch.production.min.js?{{ time }}"></script>
 {%- endif %}
 
-<link href="{{ '/assets/' | append: page.layout | append: '.css' }}?{{ time }}" rel="stylesheet">
-<script src="/assets/jekyll-theme-cs50.js?{{ time }}"></script>
+<link href="{{ site.baseurl | append: '/assets/' | append: page.layout | append: '.css' }}?{{ time }}" rel="stylesheet">
+<script src="/assets/jekyll-theme-crestlex.js?{{ time }}"></script>
 
-<script>
-    window.CS50 = {
-        locale: {{ site.cs50.locale | jsonify }},
-        tz: {{ site.cs50.tz | jsonify }}
-    };
-</script>
 
 <title>{{ title }}</title>
