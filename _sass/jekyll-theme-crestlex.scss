@@ -306,6 +306,10 @@ details > summary {
 }
 
 //// video
+.vid-fluid {
+    max-width: 100%;
+    height: auto;
+}
 
 // Format videos like paragraphs
 [data-video] {
