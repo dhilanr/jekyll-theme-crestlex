@@ -306,6 +306,17 @@ details > summary {
 }
 
 //// video
+
+// half width on larger devices
+@include media-breakpoint-up(md) {
+    @media screen {
+        .vid-fluid {
+            max-width: 50%;
+            height: auto;
+        }
+    }
+}
+
 .vid-fluid {
     max-width: 100%;
     height: auto;
